@@ -35,6 +35,6 @@ const suma = numeros.reduce(function(acc, elemento) {
 function productos = numeros.reduce(multipicarDosNumeros);
 // .reduce funciona en cualquier tipo de datos.
 // En este ejempli configuramos una acumulador de arranque
-const frase = palabra.reduce(function(acc. elemento){
+    const frase = palabra.reduce(function(acc, elemento){
     return acc + " " + elemento;
-}, "frase completa:")
+}, "frase completa:");
