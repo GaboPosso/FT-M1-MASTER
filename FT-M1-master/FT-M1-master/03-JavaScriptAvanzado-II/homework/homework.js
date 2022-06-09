@@ -19,13 +19,21 @@ function counter() {
   otroContador()      // 2
   otroContador()      // 3
    */
-    let contador = 0;
-  return function incrementa(){
-    contador = contador + 1;
-    return contador;
-  }
-  const nuevoContador = counter()
-  const otroContador = counter()
+  function counter() { 
+    //Closures: Three conditions are required:  1. A function wrote inside another function(nested)
+    /*------------------------------------------2. A variable declared in the parent function, which is called 
+      ---------------------------------------------inside the nested function. 	
+      ------------------------------------------3. Invoke the nested function from outer scope.*/								
+        let contador = 0; // Variable declared in the parent function Scope, which is referred in the nested 														//function
+        return function incrementa(){  //Nested Function
+          contador = contador + 1;	//Call variable declared in parent function 
+          return  contador; 
+      }
+    }
+    const nuevoContador = counter(); //Despite the variable 'contador' is inside the parent function scope, an 
+    //it's not reachable from global scope, we can define a new variable with global scope, as we save the 
+    //function in the global variable, we can call the nested function.
+    const otroContador = counter(); //A new variable with the saved function creates a new Execution Context.
 
 }
 
@@ -49,6 +57,7 @@ function cacheFunction(cb) {
   squareCache(5)    // no volverá a invocar a square, simplemente buscará en la caché cuál es el resultado de square(5) y lo retornará (tip: si usaste un objeto, podés usar hasOwnProperty) 
 
   */
+  
 
   
 }
