@@ -24,7 +24,7 @@ const gabriel = {
         console.log(salute); //If I don't invoke the function, this won't be showed
 
         if (withFarewell){
-          console.log(farewell); //if with farewell is truem then show the farewell too.
+          console.log(farewell); //if with farewell is true then show the farewell too.
         } 
 
     }
@@ -44,7 +44,7 @@ gabriel.sayHi.call(ginna, true, true)// PresentContext.MethodCalled.call(NewCont
 
 //FUNCTION PROTOTYPE APPLY
 
-//Is very simylar to call
+//Is very similar to call
 
 gabriel.sayHi.apply(ginna, [true, true])//Same a Call, but the parameters are written as an array.
 
@@ -76,4 +76,4 @@ const fernanda = { //Objects don't create new contexts
 }
 fernanda.hi();
 
-//Arrow function serach the context of this in the time they are used, by that if arrow functions are called outside a function they point to the global context.
+//Arrow function search the context of this in the time they are used, by that if arrow functions are called outside a function they point to the global context.
